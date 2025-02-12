@@ -1,0 +1,338 @@
+*,ul{
+    margin: 0;
+    padding: 0;
+    background-color: #02B7FF;
+    
+}
+
+
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.logo{
+    width: 200px;
+}
+
+
+.card{
+    width: 20rem;
+    border-radius: 1rem;
+    box-shadow: 0.4rem 0.4rem #05060f;
+    overflow: hidden;
+}
+
+.custom-bg{
+    background-color: #02B7FF;
+    color: #000;
+}
+
+.custom-btn{
+    border-radius: 1rem;
+    box-shadow: 0.4rem 0.4rem #05060f;
+    overflow: hidden;
+}
+
+.bordes {
+    position: relative;
+    font-weight: bold;
+    color: white; /* Color del texto */
+}
+
+.bordes::before {
+    content: ""; 
+    position: absolute;
+    top: -5px; left: -5px;
+    right: -5px; bottom: -5px;
+    border: 3px solid black; /* Grosor y color del borde */
+    z-index: -1; /* Asegura que el borde esté detrás del texto */
+}
+
+
+/* Estilos generales (para todos los tamaños de pantalla) */
+
+
+/* Para pantallas grandes (desktops) */
+@media (min-width: 1024px) {
+    .container {
+        width: 70%;  /* en pantallas grandes, uso un contenedor más estrecho */
+    }
+
+    header {
+        padding: 30px;  /* mayor espacio en pantallas grandes */
+    }
+
+    .main-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .sidebar {
+        width: 25%; /* sidebar más estrecho */
+    }
+
+    .content {
+        width: 70%; /* mayor ancho para el contenido */
+    }
+}
+
+/* Para tabletas (pantallas medianas) */
+@media (max-width: 1023px) and (min-width: 600px) {
+    .container {
+        width: 90%; /* más espacio para la pantalla de tablet */
+    }
+
+    header {
+        padding: 20px;  /* menor espacio */
+    }
+
+    .main-content {
+        flex-direction: column;  /* en tabletas apilamos los elementos */
+    }
+
+    .sidebar, .content {
+        width: 100%;  /* los elementos ocupan todo el ancho */
+        margin-bottom: 20px;
+    }
+}
+
+/* Para dispositivos pequeños (móviles) */
+@media (max-width: 599px) {
+    body {
+        font-size: 14px; /* reducir el tamaño de la fuente para móviles */
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    .container {
+        width: 100%;  /* ocupar todo el ancho en móviles */
+    }
+
+    .main-content {
+        flex-direction: column;  /* apilar los elementos en una columna */
+    }
+
+    .sidebar, .content {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .sidebar {
+        display: none;  /* en móviles, ocultamos el sidebar */
+    }
+}
+
+
+/* 
+##Device = Desktops
+##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+
+    /* CSS */
+    
+}
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    
+    /* CSS */
+    .col{
+        padding: 20px;
+        
+    }
+    
+}
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+    /* CSS */
+    
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    /* CSS */
+
+    h1{
+        text-align: center;
+    }
+
+    h2{
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        height: 300px;          /* Ajusta el alto al 100% de la ventana */
+    }
+
+    .logo{
+        max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+        height: auto;    /* Mantiene las proporciones de la imagen */
+        margin-left: 100px;
+    }
+
+    .col{
+        display: grid;
+        place-items: center;  /* Centra horizontal y verticalmente */
+        height: 90vh; 
+    }
+
+    label{
+        text-align: left;
+        padding-top: 5px;
+    }
+
+    nav{
+        height: 1vh;
+    }
+
+    .colum1{
+        height: 90px; 
+        padding-top: 50px;
+    }
+
+    .panchoc{
+        margin-top: 25px;
+    }
+    
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+@media (min-width: 481px) and (max-width: 767px) {
+    
+    /* CSS */
+
+    
+
+    h1{
+        text-align: center;
+    }
+
+    h2{
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        height: 300px;          /* Ajusta el alto al 100% de la ventana */
+    }
+
+    .logo{
+        max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+        height: auto;    /* Mantiene las proporciones de la imagen */
+        margin-left: 100px;
+    }
+
+    .col{
+        display: grid;
+        place-items: center;  /* Centra horizontal y verticalmente */
+        height: 90vh; 
+    }
+
+    label{
+        text-align: left;
+        padding-top: 5px;
+    }
+
+    nav{
+        height: 1vh;
+    }
+
+    .colum1{
+        height: 90px; 
+        padding-top: 50px;
+    }
+
+    .panchoc{
+        margin-top: 25px;
+    }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 320px) and (max-width: 480px) {
+    
+    /* CSS */
+
+    h1{
+        text-align: center;
+    }
+
+    h2{
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        height: 300px;          /* Ajusta el alto al 100% de la ventana */
+    }
+
+    .logo{
+        max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+        height: auto;    /* Mantiene las proporciones de la imagen */
+        margin-left: 100px;
+    }
+
+    .col{
+        display: grid;
+        place-items: center;  /* Centra horizontal y verticalmente */
+        height: 90vh; 
+    }
+
+    label{
+        text-align: left;
+        padding-top: 5px;
+    }
+
+    nav{
+        height: 1vh;
+    }
+
+    .colum1{
+        height: 90px; 
+        padding-top: 50px;
+    }
+
+    .panchoc{
+        margin-top: 25px;
+    }
+    
+}
